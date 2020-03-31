@@ -1,0 +1,9 @@
+{
+  "name": "storable-functions",
+  "version": "1.0.0",
+  "description": "Storable and executable functions",
+  "main": "index.js",
+  "repository": "https://github.com/habinari/storable-functions.js.git",
+  "author": "Javier Parada",
+  "license": "MIT"
+}
