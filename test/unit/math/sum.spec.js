@@ -2,7 +2,7 @@ const { expect } = require('chai')
 const { resolve } = require('../../../index')
 
 describe("unit.resolve.sum", () => {
-  describe("should resolve simple operations with one element", () => {
+  describe("Should resolve simple operations with one element", () => {
     it("Should resolve sum with 0", () => {
       const operation = ['+', 0]
       const result = resolve(operation)
@@ -22,7 +22,7 @@ describe("unit.resolve.sum", () => {
     })
   })
 
-  describe("should resolve simple operations with two elements", () => {
+  describe("Should resolve simple operations with two elements", () => {
     it("Should resolve sum with double 0", () => {
       const operation = ['+', 0, 0]
       const result = resolve(operation)
@@ -58,6 +58,110 @@ describe("unit.resolve.sum", () => {
       const result = resolve(operation)
       expect(result).to.be.equals(16)
     })
+  })
+
+  describe("Should resolve simple operations with multiple elements", () => {
+    it("Should resolve sum with all values as 0", () => {
+      const operation = ['+', 0, 0, 0]
+      const result = resolve(operation)
+      expect(result).to.be.equals(0)
+    })
+
+    it("Should resolve sum with some 0", () => {
+      const operation = ['+', 0, 1, 0]
+      const result = resolve(operation)
+      expect(result).to.be.equals(1)
+    })
+
+    it("Should resolve sum with at least one 0", () => {
+      const operation = ['+', 0, 3, 2]
+      const result = resolve(operation)
+      expect(result).to.be.equals(5)
+    })
+
+    it("Should resolve sum with all values as 1", () => {
+      const operation = ['+', 1, 1, 1]
+      const result = resolve(operation)
+      expect(result).to.be.equals(3)
+    })
+
+    it("Should resolve sum with two values as 1", () => {
+      const operation = ['+', 1, 7, 1]
+      const result = resolve(operation)
+      expect(result).to.be.equals(9)
+    })
+
+    it("Should resolve sum with at least one 1", () => {
+      const operation = ['+', 7, 1, 9]
+      const result = resolve(operation)
+      expect(result).to.be.equals(17)
+    })
+
+    it("Should resolve sum with all elements different", () => {
+      const operation = ['+', 1, 2, 3]
+      const result = resolve(operation)
+      expect(result).to.be.equals(6)
+    })
+
+    it("Should resolve sum with all elements with same value but greater than 1", () => {
+      const operation = ['+', 2, 2, 2]
+      const result = resolve(operation)
+      expect(result).to.be.equals(6)
+    })
+  })
+
+  describe("Should keep to conmutative property", () => {
+    it("Should be conmutative have at least one 0", () => {
+      const res1 = resolve(['+', 0, 3])
+      const res2 = resolve(['+', 3, 0])
+      expect(res1).to.be.equals(res2)
+    })
+
+    it("Should be conmutative have at least one 1", () => {
+      const res1 = resolve(['+', 7, 1])
+      const res2 = resolve(['+', 1, 7])
+      expect(res1).to.be.equals(res2)
+    })
+
+    it("Should be conmutative when have 0 and 1", () => {
+      const res1 = resolve(['+', 0, 1])
+      const res2 = resolve(['+', 1, 0])
+      expect(res1).to.be.equals(res2)
+    })
+
+    it("Should be conmutative when have different elements greater than 1", () => {
+      const res1 = resolve(['+', 7, 9])
+      const res2 = resolve(['+', 9, 7])
+      expect(res1).to.be.equals(res2)
+    })
+
+    it("Should be conmutative have at least one 0 and three elements", () => {
+      const res1 = resolve(['+', 0, 3, 4])
+      const res2 = resolve(['+', 4, 0, 3])
+      expect(res1).to.be.equals(res2)
+    })
+
+    it("Should be conmutative have at least one 1 and three elements", () => {
+      const res1 = resolve(['+', 7, 1, 9])
+      const res2 = resolve(['+', 1, 9, 7])
+      expect(res1).to.be.equals(res2)
+    })
+
+    it("Should be conmutative when have 0 and 1", () => {
+      const res1 = resolve(['+', 0, 1, 0])
+      const res2 = resolve(['+', 0, 1, 0])
+      expect(res1).to.be.equals(res2)
+    })
+
+    it("Should be conmutative when have different elements greater than 1", () => {
+      const res1 = resolve(['+', 7, 9, 3])
+      const res2 = resolve(['+', 3, 9, 7])
+      expect(res1).to.be.equals(res2)
+    })
+  })
+
+  describe("Should throw error", () => {
+
   })
 })
 
