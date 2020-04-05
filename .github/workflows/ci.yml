@@ -10,5 +10,5 @@ jobs:
               run: yarn install
             - name: Running tests
               run: yarn install
-            - name: Install Nest dependencies
+            - name: Run tests
               run: yarn run test
