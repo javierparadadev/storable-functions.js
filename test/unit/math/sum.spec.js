@@ -178,7 +178,7 @@ describe("unit.resolve.sum", () => {
     })
 
     it("Should be conmutative when have 0 and 1", () => {
-      const res1 = resolve(['+', 0, 1, 0])
+      const res1 = resolve(['+', 1, 0, 0])
       const res2 = resolve(['+', 0, 1, 0])
       expect(res1).to.be.equals(res2)
     })
