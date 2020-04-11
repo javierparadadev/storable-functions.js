@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const { resolve } = require('../../../index')
 
-describe("unit.resolve.and", () => {
+describe("unit.resolve.or", () => {
   describe("Should resolve simple operations with one element", () => {
     it("Should resolve logic or with false", () => {
       const operation = ['or', false]
