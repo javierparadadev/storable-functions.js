@@ -1,7 +1,7 @@
 const { expect } = require('chai')
 const { resolve } = require('../../../index')
 
-describe.only("unit.resolve.map", () => {
+describe("unit.resolve.map", () => {
   describe("Should resolve empty element input", () => {
     it("Should resolve single number operation +1", () => {
       const operation = ['map', 'num', ['+', ['arg', 'num'], 1]]
