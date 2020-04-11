@@ -1,0 +1,22 @@
+[
+  {
+    "module-name": "math",
+    "functions": [
+      {
+        "function-name": "sum",
+        "token": "+",
+        "description": "",
+        "samples": [
+          {
+            "title": "simple sum",
+            "sample": ["+", 5, 2]
+          },
+          {
+            "title": "nested sample",
+            "sample": ["+", 3, ["+", 2, 2]]
+          }
+        ]
+      }
+    ]
+  }
+]
