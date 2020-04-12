@@ -32,6 +32,8 @@
   <link rel="icon" type="image/png" href="img/developer.png" sizes="16x16">
   -->
 
+  <script src="./js/storable-functions.js"></script>
+
 </head>
 
 <body>
@@ -93,6 +95,26 @@
         </ul>
       </div>
     </section>
+
+    <!-- START: PLAYGROUND -->
+    <div v-show="tab === 'playground'" class="container">
+      <div class="row">
+        <div class="column">
+          <div class="field">
+            <div class="control">
+              <textarea
+                class="textarea is-large has-fixed-size"
+                v-model="code"
+                placeholder="Function code"
+                v-on:keyup="resolve($event.target.value)">
+              </textarea>
+              <p>{{solution}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: PLAYGROUND -->
   </div>
 
   <script src="./js/index.js"></script>
