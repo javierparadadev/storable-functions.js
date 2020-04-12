@@ -35,63 +35,67 @@
 </head>
 
 <body>
-  <nav class="navbar is-info">
-    <div class="navbar-brand">
-      <div class="navbar-burger burger">
-        <span></span>
-        <span></span>
-        <span></span>
+  <div id="app">
+    <nav class="navbar is-info">
+      <div class="navbar-brand">
+        <div class="navbar-burger burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </div>
-    <div class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="field is-grouped">
-            <p class="control">
-              <button class="button is-link is-inverted is-outlined" target="_blank">
-                <span class="icon is-small">
-                  <i class="fab fa-github-alt"></i>
-                </span>
-                <span>
-                  Github
-                </span>
-              </button>
-            </p>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <button class="button is-link is-inverted is-outlined" target="_blank">
+                  <span class="icon is-small">
+                    <i class="fab fa-github-alt"></i>
+                  </span>
+                  <span>
+                    Github
+                  </span>
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
-  <section class="hero is-info is-medium">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <i class="fas fa-boxes is-size-1"></i>
-        <h2 class="title">
-          Storable functions
-        </h2>
+    </nav>
+    <section class="hero is-info is-medium">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <i class="fas fa-boxes is-size-1"></i>
+          <h2 class="title">
+            Storable functions
+          </h2>
+        </div>
       </div>
-    </div>
-    <div class="tabs is-boxed is-centered main-menu">
-      <ul>
-        <li>
-          <a>
-            <span class="icon is-small">
-              <i class="fas fa-book"></i>
-            </span>
-            <span>Documentation</span>
-          </a>
-        </li>
-        <li class="is-active">
-          <a>
-            <span class="icon is-small">
-              <i class="fas fa-chess-king"></i>
-            </span>
-            <span>Playground</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+      <div class="tabs is-boxed is-centered main-menu">
+        <ul>
+          <li v-bind:class="{ 'is-active': tab === 'documentation' }" v-on:click="setTab('documentation')">
+            <a>
+              <span class="icon is-small">
+                <i class="fas fa-book"></i>
+              </span>
+              <span>Documentation</span>
+            </a>
+          </li>
+          <li v-bind:class="{ 'is-active': tab === 'playground' }" @click="setTab('playground')">
+            <a>
+              <span class="icon is-small">
+                <i class="fas fa-chess-king"></i>
+              </span>
+              <span>Playground</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
