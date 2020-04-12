@@ -4,7 +4,8 @@
   "description": "Storable and executable functions",
   "main": "index.js",
   "scripts": {
-    "test": "find ./test -name '*.spec.js' | xargs mocha -R spec"
+    "test": "find ./test -name '*.spec.js' | xargs mocha -R spec",
+    "build": "webpack"
   },
   "repository": "https://github.com/habinari/storable-functions.js.git",
   "author": "Javier Parada",
@@ -12,6 +13,8 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }
