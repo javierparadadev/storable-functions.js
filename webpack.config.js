@@ -4,7 +4,7 @@ module.exports = {
   entry: './index.js',
   output: {
     filename: 'storable-functions.js',
-    path: path.resolve(__dirname, './docs/js/'),
+    path: path.resolve(__dirname, './dist/'),
     library: 'sf'
   },
   mode: 'production'
