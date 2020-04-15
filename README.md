@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/habinari/storable-functions.js)
 ![npm](https://img.shields.io/npm/v/storable-functions)
-![](https://github.com/habinari/storable-functions.js/workflows/tests/badge.svg?style=flat-square)
+![](https://github.com/habinari/storable-functions.js/workflows/tests/badge.svg)
 
 Storable and executable functions using array based simple syntax and functional programming.
 
@@ -18,7 +18,7 @@ Storable and executable functions using array based simple syntax and functional
   yarn add storable-functions
 ```
 
-# Contributors
+## Contributors
 
 * **Javier Parada** - [@habinari](https://github.com/habinari)
 
