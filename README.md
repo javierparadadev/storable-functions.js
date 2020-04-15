@@ -1,8 +1,5 @@
 # Storable functions
 
-[![](https://img.shields.io/github/license/habinari/storable-functions.js.svg?style=flat-square)](https://github.com/habinari/storable-functions.js/blob/master/LICENSE)
-![](https://img.shields.io/badge/PRs-welcome-green.svg?style=flat-square)
-
 Storable and executable functions using array based simple syntax and functional programming.
 
 ## Getting Started
