@@ -8,8 +8,6 @@ jobs:
               uses: actions/checkout@v1
             - name: Install dependencies
               run: yarn install
-            - name: Running tests
-              run: yarn install
             - name: Run tests
               run: yarn run test
             - name: Build project
