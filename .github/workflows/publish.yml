@@ -1,0 +1,22 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Clone and checkout branch
+        uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn install
+      - name: Run tests
+        run: yarn run test
+      - name: Build project
+        run: yarn run build
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
