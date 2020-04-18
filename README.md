@@ -20,13 +20,41 @@ Storable and executable functions using array based simple syntax and functional
 
 ### Example usage
 
+#### Basic sample
+
 ```javascript
   const { resolve } = require('storable-functions')
 
-  const operation = [ '+', 3, 4 ]
+  const operation = [ '+', 3, 4 ] // (3 + 4)
 
   console.log(resolve(operation))
   // output: 7
+```
+
+#### Nested sample
+
+```javascript
+  const operation = [ 'mod', ['+', 3, 7], 3 ] // (3 + 7) % 3
+  console.log(resolve(operation))
+  // output: 1
+```
+
+#### Higher order sample
+
+```javascript
+  const operation = [
+    'map', // map function
+    'num', // argument variable name
+    [ '+', 3, [ 'arg', 'num' ] ], // lambda
+    ['array', 1, 2, 3] ] // data
+
+  /* In js:
+    [1, 2, 3].map(num => num + 3)
+  */
+
+  console.log(resolve(operation))
+
+  // output: [4, 5, 6]
 ```
 
 ### Operations
@@ -53,8 +81,8 @@ Storable and executable functions using array based simple syntax and functional
 | Not                 | not         | x: Boolean                    | ["not", true]                                         | false   |
 | Equals              | ==          | x: any, y: any                | ["==", 1, 1]                                          | true    |
 | Conditional 1       | if          | f1: Function, x: any          | ["if", ["==", 1, 1], 4]                               | 4       |
-| Conditional 2       | elseif      | f1: Function, x: any          | ["if", ["==", 1, 2], 4 "elseif", ["==", 1, 1], 5]     | 5       |
-| Conditional 3       | else        | x: any                        | ["if", ["==", 1, 2], 4 "else", 7]                     | 7       |
+| Conditional 2       | elseif      | f1: Function, x: any          | ["if", ["==", 1, 2], 4, "elseif", ["==", 1, 1], 5]    | 5       |
+| Conditional 3       | else        | x: any                        | ["if", ["==", 1, 2], 4, "else", 7]                    | 7       |
 
 
 ## Contributors
