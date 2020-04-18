@@ -69,7 +69,7 @@ Storable and executable functions using array based simple syntax and functional
 | Division            | /           | x: Number, y: Number          | ["/", 6, 3]                   | 2       |
 | Module              | mod         | x: Number, y: Number          | ["mod", 4, 3]                 | 1       |
 | Absolute value      | abs         | x: Number                     | ["abs", -4]                   | 4       |
-| Arithmetic mean     | avg         | f: function<Number[]>         | ["avg", ["array", 4, 6, 5]]   | 5       |
+| Arithmetic mean     | avg         | f: Function<Number[]>         | ["avg", ["array", 4, 6, 5]]   | 5       |
 
 
 #### Logic module
