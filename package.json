@@ -2,6 +2,7 @@
   "name": "storable-functions",
   "version": "0.0.4",
   "description": "Storable and executable functions",
+  "homepage": "https://www.javierparada.dev/storable-functions",
   "main": "index.js",
   "scripts": {
     "test": "find ./test -name '*.spec.js' | xargs mocha -R spec",

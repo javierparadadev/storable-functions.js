@@ -61,15 +61,15 @@ Storable and executable functions using array based simple syntax and functional
 
 #### Math module
 
-| Operation           | Token       | Params                        |  Sample            |  Output |
-|:--------------------|:-----------:|:------------------------------|:-------------------|:--------|
-| Sum                 | +           | x: Number, y: Number          | ["+", 3, 4]        | 7       |
-| Subtraction         | -           | x: Number, y: Number          | ["-", 9, 4]        | 5       |
-| Multiplication      | *           | x: Number, y: Number          | ["*", 2, 7]        | 14      |
-| Division            | /           | x: Number, y: Number          | ["/", 6, 3]        | 2       |
-| Module              | mod         | x: Number, y: Number          | ["mod", 4, 3]      | 1       |
-| Absolute value      | abs         | x: Number                     | ["abs", -4]        | 4       |
-| Arithmetic mean     | avg         | ...n: Number                  | ["avg", 4, 6, 5]   | 5       |
+| Operation           | Token       | Params                        |  Sample                       |  Output |
+|:--------------------|:-----------:|:------------------------------|:------------------------------|:--------|
+| Sum                 | +           | x: Number, y: Number          | ["+", 3, 4]                   | 7       |
+| Subtraction         | -           | x: Number, y: Number          | ["-", 9, 4]                   | 5       |
+| Multiplication      | *           | x: Number, y: Number          | ["*", 2, 7]                   | 14      |
+| Division            | /           | x: Number, y: Number          | ["/", 6, 3]                   | 2       |
+| Module              | mod         | x: Number, y: Number          | ["mod", 4, 3]                 | 1       |
+| Absolute value      | abs         | x: Number                     | ["abs", -4]                   | 4       |
+| Arithmetic mean     | avg         | ...n: Number                  | ["avg", ["array", 4, 6, 5]]   | 5       |
 
 
 #### Logic module
