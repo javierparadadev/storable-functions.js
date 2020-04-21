@@ -1,6 +1,6 @@
 {
   "name": "storable-functions",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Storable and executable functions",
   "homepage": "https://www.javierparada.dev/storable-functions",
   "main": "index.js",
