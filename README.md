@@ -69,6 +69,9 @@ Storable and executable functions using array based simple syntax and functional
 | Division            | /           | x: Number, y: Number          | ["/", 6, 3]                   | 2       |
 | Module              | mod         | x: Number, y: Number          | ["mod", 4, 3]                 | 1       |
 | Absolute value      | abs         | x: Number                     | ["abs", -4]                   | 4       |
+| Floor               | floor       | x: Number                     | ["floor", 7.2]                | 7       |
+| Ceil                | ceil        | x: Number                     | ["ceil", 7.2]                 | 8       |
+| Trunc               | trunc       | x: Number                     | ["trunc", 7.2]                | 7       |
 | Square root         | sqrt        | x: Number                     | ["sqrt", 4]                   | 2       |
 | Cubic root          | cbrt        | x: Number                     | ["cbrt", 8]                   | 2       |
 | Arithmetic mean     | avg         | f: Function<Number[]>         | ["avg", ["array", 4, 6, 5]]   | 5       |
