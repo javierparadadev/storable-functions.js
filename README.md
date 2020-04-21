@@ -46,7 +46,8 @@ Storable and executable functions using array based simple syntax and functional
     'map', // map function
     'num', // argument variable name
     [ '+', 3, [ 'arg', 'num' ] ], // lambda
-    ['array', 1, 2, 3] ] // data
+    ['array', 1, 2, 3] // data
+  ]
 
   /* In js:
     [1, 2, 3].map(num => num + 3)

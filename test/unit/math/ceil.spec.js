@@ -9,7 +9,7 @@ describe("unit.resolve.ceil", () => {
       expect(result).to.be.equals(0)
     })
 
-    it("Should resolve ceil with a decimal near to ceil", () => {
+    it("Should resolve ceil with a decimal near to floor", () => {
       const operation = ['ceil', 0.1]
       const result = resolve(operation)
       expect(result).to.be.equals(1)
@@ -21,7 +21,13 @@ describe("unit.resolve.ceil", () => {
       expect(result).to.be.equals(1)
     })
 
-    it("Should resolve negative ceil with a decimal near to ceil", () => {
+    it("Should resolve ceil with a decimal at middle", () => {
+      const operation = ['ceil', 0.5]
+      const result = resolve(operation)
+      expect(result).to.be.equals(1)
+    })
+
+    it("Should resolve negative ceil with a decimal near to floor", () => {
       const operation = ['ceil', -0.1]
       const result = resolve(operation)
       expect(result).to.be.equals(0)
@@ -29,6 +35,12 @@ describe("unit.resolve.ceil", () => {
 
     it("Should resolve negative ceil with a decimal near to ceil", () => {
       const operation = ['ceil', -0.9]
+      const result = resolve(operation)
+      expect(result).to.be.equals(0)
+    })
+
+    it("Should resolve negative ceil with a decimal at middle", () => {
+      const operation = ['ceil', -0.5]
       const result = resolve(operation)
       expect(result).to.be.equals(0)
     })
@@ -41,7 +53,7 @@ describe("unit.resolve.ceil", () => {
       expect(result).to.be.equals(1)
     })
 
-    it("Should resolve ceil with a decimal near to ceil", () => {
+    it("Should resolve ceil with a decimal near to floor", () => {
       const operation = ['ceil', 1.1]
       const result = resolve(operation)
       expect(result).to.be.equals(2)
@@ -53,7 +65,13 @@ describe("unit.resolve.ceil", () => {
       expect(result).to.be.equals(2)
     })
 
-    it("Should resolve negative ceil with a decimal near to ceil", () => {
+    it("Should resolve ceil with a decimal at middle", () => {
+      const operation = ['ceil', 1.5]
+      const result = resolve(operation)
+      expect(result).to.be.equals(2)
+    })
+
+    it("Should resolve negative ceil with a decimal near to floor", () => {
       const operation = ['ceil', -1.1]
       const result = resolve(operation)
       expect(result).to.be.equals(-1)
@@ -61,6 +79,12 @@ describe("unit.resolve.ceil", () => {
 
     it("Should resolve negative ceil with a decimal near to ceil", () => {
       const operation = ['ceil', -1.9]
+      const result = resolve(operation)
+      expect(result).to.be.equals(-1)
+    })
+
+    it("Should resolve negative ceil with a decimal at middle", () => {
+      const operation = ['ceil', -1.5]
       const result = resolve(operation)
       expect(result).to.be.equals(-1)
     })
@@ -73,7 +97,7 @@ describe("unit.resolve.ceil", () => {
       expect(result).to.be.equals(7)
     })
 
-    it("Should resolve ceil with a decimal near to ceil", () => {
+    it("Should resolve ceil with a decimal near to floor", () => {
       const operation = ['ceil', 7.1]
       const result = resolve(operation)
       expect(result).to.be.equals(8)
@@ -85,7 +109,13 @@ describe("unit.resolve.ceil", () => {
       expect(result).to.be.equals(8)
     })
 
-    it("Should resolve negative ceil with a decimal near to ceil", () => {
+    it("Should resolve ceil with a decimal at middle", () => {
+      const operation = ['ceil', 7.5]
+      const result = resolve(operation)
+      expect(result).to.be.equals(8)
+    })
+
+    it("Should resolve negative ceil with a decimal near to floor", () => {
       const operation = ['ceil', -7.1]
       const result = resolve(operation)
       expect(result).to.be.equals(-7)
@@ -93,6 +123,12 @@ describe("unit.resolve.ceil", () => {
 
     it("Should resolve negative ceil with a decimal near to ceil", () => {
       const operation = ['ceil', -7.9]
+      const result = resolve(operation)
+      expect(result).to.be.equals(-7)
+    })
+
+    it("Should resolve negative ceil with a decimal at middle", () => {
+      const operation = ['ceil', -7.5]
       const result = resolve(operation)
       expect(result).to.be.equals(-7)
     })
