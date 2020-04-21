@@ -72,6 +72,7 @@ Storable and executable functions using array based simple syntax and functional
 | Floor               | floor       | x: Number                     | ["floor", 7.2]                | 7       |
 | Ceil                | ceil        | x: Number                     | ["ceil", 7.2]                 | 8       |
 | Trunc               | trunc       | x: Number                     | ["trunc", 7.2]                | 7       |
+| Round               | round       | x: Number                     | ["round", 7.9]                | 8       |
 | Square root         | sqrt        | x: Number                     | ["sqrt", 4]                   | 2       |
 | Cubic root          | cbrt        | x: Number                     | ["cbrt", 8]                   | 2       |
 | Arithmetic mean     | avg         | f: Function<Number[]>         | ["avg", ["array", 4, 6, 5]]   | 5       |
