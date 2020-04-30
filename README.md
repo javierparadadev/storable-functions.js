@@ -14,9 +14,12 @@ Storable and executable functions using array based simple syntax and functional
   npm install storable-functions
 ```
 
+### Run tests
+
 ```Shell
-  yarn add storable-functions
+  npm run-script test
 ```
+
 
 ### Example usage
 
@@ -58,6 +61,7 @@ Storable and executable functions using array based simple syntax and functional
   // output: [4, 5, 6]
 ```
 
+
 ### Operations
 
 #### Math module
@@ -90,6 +94,20 @@ Storable and executable functions using array based simple syntax and functional
 | Conditional 1       | if          | f1: Function, x: any          | ["if", ["==", 1, 1], 4]                               | 4       |
 | Conditional 2       | elseif      | f1: Function, x: any          | ["if", ["==", 1, 2], 4, "elseif", ["==", 1, 1], 5]    | 5       |
 | Conditional 3       | else        | x: any                        | ["if", ["==", 1, 2], 4, "else", 7]                    | 7       |
+
+
+### Higher order functions
+
+| Operation           | Token       | Params                                                                        |  Sample                                                                                 |  Output     |
+|:--------------------|:-----------:|:------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|:------------|
+| Map                 | map         | argName: string, f: Function<any>, l: Function<[]>                            | ["map", "num", ["+", ["arg", "num"], 1], ["array", 1, 2, 3]]                            | [2, 3, 4]   |
+| Foldl               | foldl       | argName: string, accumulatorName: string, f: Function<any>, l: Function<[]>   | ["foldl", "num", 3, "acc", ["^", ["arg", "acc"], ["arg", "num"]], ["array", 1, 2, 3]]   | 19683       |
+| Foldr               | foldr       | argName: string, accumulatorName: string, f: Function<any>, l: Function<[]>   | ["foldr", "num", 3, "acc", ["^", ["arg", "acc"], ["arg", "num"]], ["array", 1, 2, 3]]   | 6561        |
+| Filter              | filter      | argName: string, f: Function<bool>, l: Function<[]>                           | ["filter", "num", ["==", ["arg", "num"], 0], ["array", 0, 1, 2]]                        | [0]         |
+| Find                | find        | argName: string, f: Function<bool>, l: Function<[]>                           | ["find", "num", ["==", ["arg", "num"], 1], ["array", 0, 1, 2]]                          | 1           |
+| Every               | every       | argName: string, f: Function<bool>, l: Function<[]>                           | ["every", "num", ["==", ["arg", "num"], 0], ["array", 0, 0, 0]]                         | true        |
+| Some                | some        | argName: string, f: Function<bool>, l: Function<[]>                           | ["some", "num", ["==", ["arg", "num"], 1], ["array", 0, 1, 2]]                          | true        |
+| Sort                | sort        | argName1: string, argName2: string, f: Function<number>, l: Function<[]>      | ["sort", "num1", "num2", ["-", ["arg", "num2"], ["arg", "num1"]], ["array", 3, 2, 1]]   | [1, 2, 3]   |
 
 
 ## Contributors
