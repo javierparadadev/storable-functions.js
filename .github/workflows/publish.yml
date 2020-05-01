@@ -26,7 +26,10 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npm publish --access public
+      - name: Change pkg name
+        run: node update-pkg-name storable-functions
+      - name: Publish
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
   publish-gpr:
@@ -40,7 +43,9 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@habinari'
       - run: echo @habinari:registry=https://npm.pkg.github.com/ >> .npmrc
-      - run: npm publish
+      - name: Change pkg name
+        run: node update-pkg-name @habinari/storable-functions
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GHPR_TOKEN}}
 
