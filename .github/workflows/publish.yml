@@ -10,17 +10,38 @@ jobs:
     steps:
       - name: Clone and checkout branch
         uses: actions/checkout@v1
-      - name: Setup npm and node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
       - name: Install dependencies
         run: yarn install
       - name: Run tests
         run: yarn run test
       - name: Build project
         run: yarn run build
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
       - run: npm publish --access public
+          env:
+            NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@habinari'
+      - run: echo registry=https://npm.pkg.github.com/YOUR_USERNAME >> .npmrc
+      - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GHPR_TOKEN}}
+
