@@ -40,7 +40,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@habinari'
-      - run: echo registry=https://npm.pkg.github.com/YOUR_USERNAME >> .npmrc
+      - run: echo registry=https://npm.pkg.github.com/habinari >> .npmrc
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GHPR_TOKEN}}
