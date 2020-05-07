@@ -81,6 +81,9 @@ Storable and executable functions using array based simple syntax and functional
 | Square root         | sqrt        | x: Number                     | ["sqrt", 4]                   | 2       |
 | Cubic root          | cbrt        | x: Number                     | ["cbrt", 8]                   | 2       |
 | Arithmetic mean     | avg         | f: Function<Number[]>         | ["avg", ["array", 4, 6, 5]]   | 5       |
+| Power               | ^           | x: Number, y: Number          | ["^", 2, 2]                   | 4       |
+| Maximum             | max         | f: Function<Number[]>         | ["max", ["array", 2, 3, 4]]   | 4       |
+| Minimum             | min         | f: Function<Number[]>         | ["min", ["array", 2, 3, 4]]   | 2       |
 
 
 #### Logic module
@@ -113,6 +116,7 @@ Storable and executable functions using array based simple syntax and functional
 ## Contributors
 
 * **Javier Parada** - [@habinari](https://github.com/habinari)
+* **Miguel Pardal** - [@mpardalm](https://github.com/mpardalm)
 
 See also the list of [contributors](https://github.com/habinari/storable-functions.js/contributors) who participated in this project.
 
