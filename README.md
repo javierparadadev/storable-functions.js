@@ -82,6 +82,7 @@ Storable and executable functions using array based simple syntax and functional
 | Cubic root          | cbrt        | x: Number                     | ["cbrt", 8]                   | 2       |
 | Arithmetic mean     | avg         | f: Function<Number[]>         | ["avg", ["array", 4, 6, 5]]   | 5       |
 | Power               | ^           | x: Number, y: Number          | ["^", 2, 2]                   | 4       |
+| Hypotenuse          | hypot       | x: Number, y: Number          | ["hypot", 1, 2, 2]            | 3       |
 | Maximum             | max         | f: Function<Number[]>         | ["max", ["array", 2, 3, 4]]   | 4       |
 | Minimum             | min         | f: Function<Number[]>         | ["min", ["array", 2, 3, 4]]   | 2       |
 
