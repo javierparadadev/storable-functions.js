@@ -8,7 +8,7 @@ Storable and executable functions using array based simple syntax and functional
 
 ## Getting Started
 
-### Install
+### Installation
 
 ```Shell
   npm install storable-functions
