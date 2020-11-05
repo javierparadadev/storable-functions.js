@@ -7,8 +7,8 @@ jobs:
             - name: Clone and checkout branch
               uses: actions/checkout@v1
             - name: Install dependencies
-              run: yarn install
+              run: npm install
             - name: Run tests
-              run: yarn run test
+              run: npm run-script test
             - name: Build project
-              run: yarn run build
+              run: npm run-script build

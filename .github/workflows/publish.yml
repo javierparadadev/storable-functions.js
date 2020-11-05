@@ -11,11 +11,11 @@ jobs:
       - name: Clone and checkout branch
         uses: actions/checkout@v1
       - name: Install dependencies
-        run: yarn install
+        run: npm install
       - name: Run tests
-        run: yarn run test
+        run: npm run-script test
       - name: Build project
-        run: yarn run build
+        run: npm run-script build
 
   publish-npm:
     needs: build
@@ -29,7 +29,7 @@ jobs:
       - name: Change pkg name
         run: node update-pkg-name storable-functions
       - name: Publish
-        run: yarn publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
   publish-gpr:
@@ -45,7 +45,7 @@ jobs:
       - run: echo @habinari:registry=https://npm.pkg.github.com/ >> .npmrc
       - name: Change pkg name
         run: node update-pkg-name @habinari/storable-functions
-      - run: yarn publish
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GHPR_TOKEN}}
 
