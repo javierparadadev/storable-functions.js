@@ -8,7 +8,7 @@
     "test": "find ./test -name '*.spec.js' | xargs mocha -R spec",
     "build": "webpack"
   },
-  "repository": "https://github.com/habinari/storable-functions.js.git",
+  "repository": "https://github.com/parada3desu/storable-functions.js.git",
   "author": "Javier Parada",
   "license": "MIT",
   "dependencies": {},
