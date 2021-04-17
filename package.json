@@ -1,6 +1,6 @@
 {
   "name": "storable-functions",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Storable and executable functions",
   "homepage": "https://www.javierparada.dev/storable-functions",
   "main": "index.js",
@@ -13,9 +13,9 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^7.1.1",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
   }
 }
