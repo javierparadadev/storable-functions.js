@@ -11,11 +11,11 @@ jobs:
       - name: Clone and checkout branch
         uses: actions/checkout@v1
       - name: Install dependencies
-        run: npm install
+        run: make deps
       - name: Run tests
-        run: npm run-script test
+        run: make test
       - name: Build project
-        run: npm run-script build
+        run: make
 
   publish-npm:
     needs: build
