@@ -116,9 +116,6 @@ Storable and executable functions using array based simple syntax and functional
 
 ## Contributors
 
-* **Javier Parada** - [@parada3desu](https://github.com/parada3desu)
-* **Miguel Pardal** - [@mpardalm](https://github.com/mpardalm)
-
 See also the list of [contributors](https://github.com/parada3desu/storable-functions.js/contributors) who participated in this project.
 
 ## License
