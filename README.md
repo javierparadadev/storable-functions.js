@@ -120,5 +120,5 @@ See also the list of [contributors](https://github.com/parada3desu/storable-func
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE]([LICENSE.md](https://github.com/parada3desu/storable-functions.js/blob/master/LICENSE)) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/parada3desu/storable-functions.js/blob/master/LICENSE) file for details.
 
