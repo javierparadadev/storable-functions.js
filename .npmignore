@@ -1,0 +1,5 @@
+**/**.log
+.editorconfig
+.gitignore
+.github/**
+Makefile
