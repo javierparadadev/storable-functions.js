@@ -1,7 +1,8 @@
 # Storable functions
 
 ![GitHub](https://img.shields.io/github/license/parada3desu/storable-functions.js)
-![npm](https://img.shields.io/npm/v/storable-functions)
+[![npm](https://img.shields.io/npm/v/storable-functions)](https://www.npmjs.com/package/deepfinder)
+[![npm](https://img.shields.io/npm/dy/deepfinder)](https://www.npmjs.com/package/deepfinder)
 ![](https://github.com/parada3desu/storable-functions.js/workflows/tests/badge.svg)
 
 Storable and executable functions using array based simple syntax and functional programming.
