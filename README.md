@@ -1,9 +1,9 @@
 # Storable functions
 
-![GitHub](https://img.shields.io/github/license/thekichune/storable-functions.js)
+![GitHub](https://img.shields.io/github/license/jparadadev/storable-functions.js)
 [![npm](https://img.shields.io/npm/v/storable-functions)](https://www.npmjs.com/package/storable-functions)
 [![npm](https://img.shields.io/npm/dy/storable-functions)](https://www.npmjs.com/package/storable-functions)
-![](https://github.com/thekichune/storable-functions.js/workflows/tests/badge.svg)
+![](https://github.com/jparadadev/storable-functions.js/workflows/tests/badge.svg)
 
 Storable and executable functions using array based simple syntax and functional programming.
 
@@ -117,9 +117,9 @@ Storable and executable functions using array based simple syntax and functional
 
 ## Contributors
 
-See also the list of [contributors](https://github.com/thekichune/storable-functions.js/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/jparadadev/storable-functions.js/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/thekichune/storable-functions.js/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jparadadev/storable-functions.js/blob/master/LICENSE) file for details.
 

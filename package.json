@@ -1,6 +1,6 @@
 {
   "name": "storable-functions",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Storable and executable functions",
   "homepage": "https://www.javierparada.dev/storable-functions",
   "main": "index.js",
@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thekichune/storable-functions.js.git"
+    "url": "git+https://github.com/jparadadev/storable-functions.js.git"
   },
   "author": "Javier Parada",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thekichune/storable-functions.js/issues"
+    "url": "https://github.com/jparadadev/storable-functions.js/issues"
   },
   "directories": {
     "lib": "lib",
