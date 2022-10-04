@@ -28,5 +28,8 @@
     "nyc": "^15.1.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "deepfinder": "^0.6.0"
   }
 }
